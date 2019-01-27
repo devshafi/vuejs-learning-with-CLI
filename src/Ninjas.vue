@@ -1,24 +1,22 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <ninjas></ninjas>
+
+      <h1>The ninjas list</h1>
+       <ul>
+      <li v-for="ninja in ninjas" :key="ninja">{{ninja}}</li>
+  </ul>
   </div>
+ 
 </template>
 
 <script>
 
 
-// registering components locally
-import Ninjas from './Ninjas.vue'
 export default {
   
-  components:{
-    'ninjas':Ninjas
-  },
-
   data(){
     return {
-      title:'Ninja App!'
+      ninjas: ['Yoshi','Mario','Ryu']
     }
   }
   
@@ -28,6 +26,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1{
-    color: green
+    color: purple
 }
 </style>
