@@ -1,7 +1,10 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
-    <ninjas></ninjas>
+    <app-header></app-header>
+
+    
+
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -9,11 +12,15 @@
 
 
 // registering components locally
-import Ninjas from './Ninjas.vue'
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+
+
 export default {
   
   components:{
-    'ninjas':Ninjas
+    'app-header': Header,
+    'app-footer': Footer
   },
 
   data(){
@@ -24,6 +31,7 @@ export default {
   
 }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
