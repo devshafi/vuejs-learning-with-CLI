@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>{{copyright}}</p>
+    <p>{{copyright}} {{title}}</p>
   </footer>
 </template>
 
@@ -10,10 +10,16 @@
 // registering components locally
 
 export default {
+
+  props:{ 
+    title:{
+      type:String
+    }
+  },
   
   data(){
     return {
-      copyright:'Copyright 2017 Vue Ninja'
+      copyright:'Copyright 2017'
     }
   }
   
